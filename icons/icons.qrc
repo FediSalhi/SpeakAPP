@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/modewindow">
+        <file>mode_window_main_picture.png</file>
+    </qresource>
+    <qresource prefix="/serverwindow">
+        <file>communication.png</file>
+    </qresource>
+    <qresource prefix="/clientwindow"/>
+    <qresource prefix="/">
+        <file>icons-connected.png</file>
+    </qresource>
+</RCC>
