@@ -30,7 +30,7 @@ The application depends on [Qt5](https://www.qt.io/). The build script `speakapp
 
 ## Build Instructions (Ubuntu 16.04 LTS) (Other platforms will be added in the future)
 1. Clone this repo.
-2. Run the build script `speakapp_build.sh`. If the application is successfully built, the `../build` build directory is created.
+2. Run the build script `speakapp_build.sh` from the project root folder i.e. where the .pro file exists. If the application is successfully built, the `../build` build directory is created.
 
 ## Run Instructions
 1. From the build directory `build/`, run the application using `./SpeakAPP`
