@@ -13,24 +13,23 @@ The application has 2 modes:
 <img src="images/client_mode.png"/>
 
 ## Dependencies (Linux)
-The application depends on [Qt5](https://www.qt.io/). The build script `speakapp_build.sh` installs this dependency.
+The application depends on [Qt5](https://www.qt.io/). The build script `speakapp_build.sh` installs this dependency. The versions required are Qt 5.12.8 and qmake 3.1. 
 
 ## Build Instructions
 1. Clone this repo.
-2. Run the build script `speakapp_build.sh`. If the application is successfully built, the `../Build-SpeakAPP-Desktop-Debug` build directory is created.
+2. Run the build script `speakapp_build.sh`. If the application is successfully built, the `../build` build directory is created.
 
 ## Run Instructions
-1. From the build directory `Build-SpeakAPP-Desktop-Debug`, run the application using `./SpeakAPP`
+1. From the build directory `build/`, run the application using `./SpeakAPP`
 2. Click on `I'm the boss, I let conversations happen!` button. This will start the server.
 <img src="images/start_server.png"/>
 3. Choose IP and Port (e.g. `Any` and `50888`) and click on `Connect`.
 <img src="images/Server.png"/>
-4. Now, open the application in the first client machine. If you are using `Any` as the server IP, you can open the application in the same machine.
-5. Click on `I wanna talk!` button. This will open the application in `Client` mode.
+4. Now, open the application in the first client machine. If you are using `Any` as the server IP, you can open the application in the same machine. Click on `I wanna talk!` button. This will open the application in `Client` mode.
 <img src="images/Server.png"/>
-6. Enter IP and Port. If you're running the server and the client on the same machine use the loopback IP 127.0.0.1.
+5. Enter IP and Port. If you're running the server and the client on the same machine use the loopback IP 127.0.0.1.
 <img src="images/client_connected.png"/>
-7. Repeat 4-5-6 steps to open a second client. Now you can send and receive messages between the first and second clients.
+6. Repeat steps 4-5-6 and open a second client. Now you can send and receive messages between the first and second clients.
 
 
 ## Authors
