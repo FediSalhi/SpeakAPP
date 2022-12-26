@@ -1,3 +1,16 @@
+/**
+ * @file servercommunication.cpp
+ * @brief ServerCommunication class source file
+ *
+ * This class is responsible for sending/receiving
+ * messages from/to clients. It owns the
+ * tcp server object and the clients sockets.
+ *
+ * @author Fedi Salhi
+ * @date December 22 2022
+ *
+ */
+
 #include "servercommunication.h"
 
 ServerCommunication::ServerCommunication(const QHostAddress& address, quint16 port)
@@ -8,11 +21,9 @@ ServerCommunication::ServerCommunication(const QHostAddress& address, quint16 po
         this->_listenStatus = ServerStatus::kServerListenFailure;
     } else {
         this->_listenStatus = ServerStatus::kServerListenSuccess;
-        //emit(this->connectedSuccessfully());
     }
 
     connect(this->_server, SIGNAL(newConnection()), this, SLOT(newConnectionEstablished()));
-
     this->messageSize = 0;
 }
 
@@ -78,6 +89,9 @@ void ServerCommunication::sendToAll(const QString& message) {
 
 ServerCommunication::~ServerCommunication() {
     delete this->_server;
+    for(auto* item : this->_clients) {
+        delete item;
+    }
 }
 
 ServerStatus ServerCommunication::ServerListenStatus() {

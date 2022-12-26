@@ -1,3 +1,17 @@
+/**
+ * @file modewindow.cpp
+ * @brief ModeWindow class source file
+ *
+ * This class is responsible for the creation
+ * of the mode window. It owns a client window
+ * and a server window. It creates client/server
+ * window depending on the user choice.
+ *
+ * @author Fedi Salhi
+ * @date December 22 2022
+ *
+ */
+
 #include "modewindow.h"
 #include "ui_modewindow.h"
 
@@ -11,8 +25,6 @@ ModeWindow::ModeWindow(QWidget *parent)
 ModeWindow::~ModeWindow()
 {
     delete ui;
-    delete _clientWindow;
-    delete _serverWindow;
 }
 
 void ModeWindow::on_userMode_pushButton_clicked()
@@ -35,20 +47,18 @@ void ModeWindow::on_aboutMode_pushButton_clicked()
 
 void ModeWindow::startMode() {
     if (_mode == SpeakAPPMode::kModeServer) {
-        this->_serverWindow = new ServerWindow();
+        // start server
+        this->_serverWindow = std::make_unique<ServerWindow>();
         this->_serverWindow->show();
         this->close();
     }
     if (_mode == SpeakAPPMode::kModeUser) {
         // start client
-        this->_clientWindow = new ClientWindow();
+        this->_clientWindow = std::make_unique<ClientWindow>();
         this->_clientWindow->show();
         this->close();
     }
     if (_mode == SpeakAPPMode::KModeAbout) {
-        //this->_aboutWindow = new About();
-        //this->_aboutWindow->show();
-        //this->close();
         QMessageBox::information(this, "About Me", "Hi, I'm <strong>Fedi Salhi</strong>\n \
                                  This is a chat application built for Udacity C++ Nano Degre.\n \
                                  Reach out on <strong>fedisalhi.com</strong>");

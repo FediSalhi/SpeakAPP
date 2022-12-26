@@ -1,3 +1,16 @@
+/**
+ * @file servercommunication.h
+ * @brief ServerCommunication class header file
+ *
+ * This class is responsible for sending/receiving
+ * messages from/to clients. It owns the
+ * tcp server object and the clients sockets.
+ *
+ * @author Fedi Salhi
+ * @date December 22 2022
+ *
+ */
+
 #ifndef SERVERCOMMUNICATION_H
 #define SERVERCOMMUNICATION_H
 
@@ -9,9 +22,6 @@
 #include <thread>
 #include <vector>
 #include <chrono>
-
-
-//TODO: add parameters to constructor (ip and port)
 
 enum ServerStatus {
     kServerListenFailure,

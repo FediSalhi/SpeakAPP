@@ -533,6 +533,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="Exit_pushButton">
+         <property name="text">
+          <string>Exit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="Connect_Icon_horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
