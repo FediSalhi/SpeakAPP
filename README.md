@@ -26,7 +26,7 @@ The application depends on [Qt5](https://www.qt.io/). The build script `speakapp
 3. Choose IP and Port (e.g. `Any` and `50888`) and click on `Connect`.
 <img src="images/Server.png"/>
 4. Now, open the application in the first client machine. If you are using `Any` as the server IP, you can open the application in the same machine. Click on `I wanna talk!` button. This will open the application in `Client` mode.
-<img src="images/Server.png"/>
+<img src="images/Client.png"/>
 5. Enter IP and Port. If you're running the server and the client on the same machine use the loopback IP 127.0.0.1.
 <img src="images/client_connected.png"/>
 6. Repeat steps 4-5-6 and open a second client. Now you can send and receive messages between the first and second clients.
